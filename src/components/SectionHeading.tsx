@@ -5,11 +5,28 @@ interface SectionHeadingProps {
   title: string;
   subtitle?: string;
   className?: string;
+  align?: "left" | "center" | "right";
 }
 
-const SectionHeading = ({ title, subtitle, className }: SectionHeadingProps) => {
+const SectionHeading = ({ 
+  title, 
+  subtitle, 
+  className,
+  align = "center" 
+}: SectionHeadingProps) => {
   return (
-    <div className={cn("text-center mb-12", className)} data-animate="true">
+    <div 
+      className={cn(
+        "mb-12", 
+        {
+          "text-center": align === "center",
+          "text-left": align === "left",
+          "text-right": align === "right"
+        },
+        className
+      )} 
+      data-animate="true"
+    >
       <h2 className="text-3xl md:text-4xl font-bold mb-3 hero-text-gradient">
         {title}
       </h2>

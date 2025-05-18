@@ -18,13 +18,7 @@ const TimelineItem = ({
 }: TimelineItemProps) => {
   return (
     <div
-      className={cn(
-        "relative mb-8 w-full md:w-1/2 md:mb-0",
-        position === "left"
-          ? "timeline-left md:pr-8"
-          : "timeline-right md:pl-8 md:ml-auto",
-        position === "right" && "md:text-right"
-      )}
+      className="timeline-item relative pb-10 pl-10 md:pl-12"
       data-animate="true"
     >
       <div className="timeline-dot"></div>

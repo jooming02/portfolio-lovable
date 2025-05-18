@@ -79,21 +79,43 @@
   }
 }
 
-.timeline-container::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  background-color: hsl(var(--primary));
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -1px;
+/* New Timeline Styles */
+.timeline-container {
+  position: relative;
 }
 
-@media screen and (max-width: 767px) {
-  .timeline-container::after {
-    left: 31px;
-  }
+.timeline-line {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: hsl(var(--muted-foreground)/0.3);
+}
+
+.timeline-line-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background-color: hsl(var(--primary));
+  transition: height 1.5s ease-in-out;
+}
+
+.timeline-line-grow .timeline-line-progress {
+  height: 100%;
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.timeline-item-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .timeline-dot {
@@ -102,22 +124,9 @@
   height: 16px;
   background-color: hsl(var(--primary));
   border-radius: 50%;
+  left: -32px;
+  top: 24px;
   z-index: 1;
-}
-
-.timeline-left .timeline-dot {
-  right: -8px;
-}
-
-.timeline-right .timeline-dot {
-  left: -8px;
-}
-
-@media screen and (max-width: 767px) {
-  .timeline-left .timeline-dot,
-  .timeline-right .timeline-dot {
-    left: 24px;
-  }
 }
 
 .wave-hand {
@@ -125,4 +134,31 @@
   animation-duration: 2s;
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
+}
+
+/* Keep existing wave animation */
+@keyframes wave {
+  0% { transform: rotate(0.0deg); }
+  10% { transform: rotate(14.0deg); }
+  20% { transform: rotate(-8.0deg); }
+  30% { transform: rotate(14.0deg); }
+  40% { transform: rotate(-4.0deg); }
+  50% { transform: rotate(10.0deg); }
+  60% { transform: rotate(0.0deg); }
+  100% { transform: rotate(0.0deg); }
+}
+
+.animate-wave {
+  animation-name: wave;
+}
+
+/* Hover animation for skill cards */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.skill-icon-hover:hover {
+  animation: float 2s ease-in-out infinite;
 }

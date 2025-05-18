@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import AnimatedTitle from "@/components/AnimatedTitle";
@@ -10,6 +9,7 @@ import SectionHeading from "@/components/SectionHeading";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { setupTimelineAnimation } from "@/lib/utils";
 
 const Index = () => {
   // Start animation observer
@@ -27,6 +27,9 @@ const Index = () => {
 
     const animatedElements = document.querySelectorAll('[data-animate="true"]');
     animatedElements.forEach((el) => observer.observe(el));
+
+    // Setup timeline animation
+    setupTimelineAnimation();
 
     return () => {
       animatedElements.forEach((el) => observer.unobserve(el));
@@ -193,19 +196,19 @@ const Index = () => {
             subtitle="Technologies and tools I work with"
           />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <SkillCard name="JavaScript" level={95} />
-            <SkillCard name="TypeScript" level={90} />
-            <SkillCard name="React" level={95} />
-            <SkillCard name="Next.js" level={85} />
-            <SkillCard name="Node.js" level={80} />
-            <SkillCard name="HTML/CSS" level={90} />
-            <SkillCard name="Tailwind CSS" level={90} />
-            <SkillCard name="SQL" level={75} />
-            <SkillCard name="MongoDB" level={80} />
-            <SkillCard name="Git" level={85} />
-            <SkillCard name="Docker" level={70} />
-            <SkillCard name="AWS" level={65} />
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            <SkillCard name="JavaScript" icon="javascript" />
+            <SkillCard name="TypeScript" icon="typescript" />
+            <SkillCard name="React" icon="react" />
+            <SkillCard name="Next.js" icon="nextjs" />
+            <SkillCard name="Node.js" icon="nodejs" />
+            <SkillCard name="HTML/CSS" icon="html" />
+            <SkillCard name="Tailwind CSS" icon="tailwind" />
+            <SkillCard name="SQL" icon="sql" />
+            <SkillCard name="MongoDB" icon="mongodb" />
+            <SkillCard name="Git" icon="git" />
+            <SkillCard name="Docker" icon="docker" />
+            <SkillCard name="AWS" icon="aws" />
           </div>
         </div>
       </section>
@@ -216,10 +219,16 @@ const Index = () => {
           <SectionHeading
             title="My Journey"
             subtitle="Professional experience and education"
+            align="left"
           />
 
-          <div className="timeline-container">
-            <div className="flex flex-col md:flex-row flex-wrap">
+          <div className="timeline-container relative">
+            {/* Timeline vertical line */}
+            <div className="timeline-line absolute left-5 top-0 bottom-0 w-0.5 bg-primary/20">
+              <div className="timeline-line-progress absolute top-0 w-full bg-primary" style={{ height: "0%" }}></div>
+            </div>
+            
+            <div className="pl-5">
               <TimelineItem
                 date="2021 - Present"
                 title="Senior Frontend Developer"
@@ -232,7 +241,7 @@ const Index = () => {
                 title="Full Stack Developer"
                 company="WebSolutions LLC"
                 description="Developed full-stack applications using React, Node.js, and PostgreSQL. Collaborated with UX designers to implement responsive designs."
-                position="right"
+                position="left"
               />
               <TimelineItem
                 date="2016 - 2018"
@@ -246,7 +255,7 @@ const Index = () => {
                 title="B.Sc. Computer Science"
                 company="Tech University"
                 description="Studied algorithms, data structures, and software engineering. Completed capstone project on real-time web applications."
-                position="right"
+                position="left"
               />
             </div>
           </div>
