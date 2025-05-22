@@ -13,9 +13,9 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center" data-animate="true">
           <div className="space-y-4">
             <p>
-              Hi, I'm a passionate web developer with 5+ years of experience building modern web applications. 
-              My journey in tech started when I built my first website at the age of 15, 
-              and I've been hooked on creating digital experiences ever since.
+              Hi, I'm a passionate frontend developer with a degree in Computer Science from Asia Pacific University (APU),
+              currently working as a Software Developer at Public Bank with a focus on the .NET framework. 
+              I'm also former Web Developer Intern at Sunway Group with practical experience in React, Svelte, and modern frontend technologies.
             </p>
             <p>
               I specialize in React, TypeScript, and modern frontend frameworks, 
@@ -23,13 +23,18 @@ const AboutSection = () => {
               I love learning new technologies and techniques to improve my craft.
             </p>
             <p>
-              When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new recipes in the kitchen.
+              {/* When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new recipes in the kitchen. */}
             </p>
           </div>
           <div className="flex justify-center">
-            <div className="w-60 h-60 rounded-full bg-gradient-to-br from-primary via-primary/60 to-primary/20 flex items-center justify-center">
-              <div className="w-56 h-56 rounded-full bg-background flex items-center justify-center text-7xl">
-                👩‍💻
+            <div className="w-64 h-64 rounded-full bg-gradient-to-br from-primary via-primary/60 to-primary/20 flex items-center justify-center">
+              <div className="w-60 h-60 rounded-full bg-background flex items-center justify-center text-7xl">
+                <img
+                  src="/photo/profile.jpg"
+                  alt="My profile"
+                  className="w-56 h-56 rounded-full object-cover"
+                />
+
               </div>
             </div>
           </div>

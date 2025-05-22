@@ -20,31 +20,32 @@ const ExperienceSection = () => {
           
           <div className="pl-5">
             <TimelineItem
-              date="2021 - Present"
-              title="Senior Frontend Developer"
-              company="TechCorp Inc."
-              description="Lead development of multiple web applications using React and TypeScript. Implemented CI/CD pipelines and mentored junior developers."
+              date="Dec 2024 - Present"
+              title="Trainee Analyst Programmer"
+              company="Public Bank Group"
+              description={[
+                "PresentContributed to the migration of legacy systems from Lotus Notes to .NET.", 
+                " Developed proficiency in .NET framework, C#, and SQL databases through practical implementation."
+              ]}
               position="left"
             />
             <TimelineItem
-              date="2018 - 2021"
-              title="Full Stack Developer"
-              company="WebSolutions LLC"
-              description="Developed full-stack applications using React, Node.js, and PostgreSQL. Collaborated with UX designers to implement responsive designs."
+              date="Oct 2023 - Dec 2023"
+              title="Frontend Web Developer Intern"
+              company="Sunway Group"
+              description={[
+                "Created the interactive prototype of a Learning Management System (LMS) using Figma", 
+                " Participated in the User Acceptance Testing (UAT) process and presented the prototype to stakeholders for continuous improvement",
+                " Developed the LMS frontend using Svelte, Svelte Kit, and Bootstrap, creating responsive and dynamic web pages that enhanced the user learning experience"
+              ]}
               position="left"
             />
+
             <TimelineItem
-              date="2016 - 2018"
-              title="Junior Developer"
-              company="StartupHub"
-              description="Built and maintained frontend components using React. Participated in code reviews and implemented automated testing."
-              position="left"
-            />
-            <TimelineItem
-              date="2012 - 2016"
-              title="B.Sc. Computer Science"
-              company="Tech University"
-              description="Studied algorithms, data structures, and software engineering. Completed capstone project on real-time web applications."
+              date="2021 - 2024"
+              title="Bachelor of Computer Science "
+              company="Asia Pacific University of Technology and Innovation (APU / APIIT)    "
+              description={["GPA: 3.59/4.00 (First Class Honours)"]}
               position="left"
             />
           </div>

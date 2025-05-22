@@ -1,11 +1,10 @@
-
 import { cn } from "@/lib/utils";
 
 interface TimelineItemProps {
   date: string;
   title: string;
   company?: string;
-  description: string;
+  description: string[];
   position: "left" | "right";
 }
 
@@ -29,7 +28,12 @@ const TimelineItem = ({
           </span>
           <h3 className="text-lg font-bold">{title}</h3>
           {company && <p className="text-muted-foreground">{company}</p>}
-          <p className="mt-2 text-sm text-card-foreground/80">{description}</p>
+          {/* <p className="mt-2 text-sm text-card-foreground/80">{description}</p> */}
+          <ul className="mt-2 text-sm text-card-foreground/80 list-disc list-inside space-y-1">
+            {description.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

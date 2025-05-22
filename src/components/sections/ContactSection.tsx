@@ -27,7 +27,7 @@ const ContactSection = () => {
                 <Button variant="outline" size="icon" className="rounded-full">
                   <Mail className="h-4 w-4" />
                 </Button>
-                <span>hello@example.com</span>
+                <span>laujm02@hotmail.com</span>
               </div>
               
               <div className="flex items-center gap-3">
@@ -35,12 +35,12 @@ const ContactSection = () => {
                   <Linkedin className="h-4 w-4" />
                 </Button>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/joo-ming-lau-974804235/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  linkedin.com/in/janedev
+                  linkedin.com/laujooming
                 </a>
               </div>
               
@@ -49,12 +49,12 @@ const ContactSection = () => {
                   <Github className="h-4 w-4" />
                 </Button>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/jooming02"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
                 >
-                  github.com/janedev
+                  github.com/jooming02
                 </a>
               </div>
             </div>

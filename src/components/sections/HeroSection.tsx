@@ -12,7 +12,7 @@ const HeroSection = () => {
             <span className="wave-hand animate-wave">👋</span> Hi there, I'm
           </span>
           <AnimatedTitle
-            text="Jane Developer"
+            text="React Developer"
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           />
           <h2 className="text-xl md:text-2xl mb-6 text-muted-foreground">
@@ -35,19 +35,19 @@ const HeroSection = () => {
 
         <div className="flex gap-4 mt-8">
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/jooming02" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5" />
               <span className="sr-only">GitHub</span>
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/joo-ming-lau-974804235/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-5 h-5" />
               <span className="sr-only">LinkedIn</span>
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="mailto:hello@example.com">
+            <a href="mailto:laujm02@hotmail.com">
               <Mail className="w-5 h-5" />
               <span className="sr-only">Email</span>
             </a>
