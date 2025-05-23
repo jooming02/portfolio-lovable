@@ -4,11 +4,11 @@ Welcome to my personal portfolio website built to showcase my projects, skills, 
 
 ## 🚀 Features
 
-- ✅ **Responsive Design** — Optimized for desktop, tablet, and mobile devices.
+- 🧩 **Project Showcase** — Visually presented projects with live demo, github link and tech tags.
 - 🎯 **Interactive Timeline** — Clean vertical timeline to highlight work experiences and education.
+- ✅ **Responsive Design** — Optimized for desktop, tablet, and mobile devices.
 - ✨ **Smooth Animations** — Subtle and pleasing transitions for a dynamic experience.
 - 🌗 **Light/Dark Mode** — Toggle between light and dark themes.
-- 🧩 **Project Showcase** — Visually presented projects with hover effects and tech tags.
 
 ## 🛠 Tech Stack
 
@@ -25,8 +25,8 @@ To run this project locally:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-portfolio-repo.git
-cd your-portfolio-repo
+git clone https://github.com/jooming02/portfolio-lovable.git
+```
 
 ### 2. Install dependencies
 
@@ -34,6 +34,7 @@ cd your-portfolio-repo
 npm install
 # or
 yarn install
+```
 
 ### 3. Start the development server
 
@@ -41,5 +42,6 @@ yarn install
 npm run dev
 # or
 yarn dev
+```
 
 ### 4. Open your browser and navigate to http://localhost:3000 to view the site.
