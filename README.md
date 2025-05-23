@@ -1,65 +1,45 @@
-# Welcome to your Lovable project
+# 💼 Personal Developer Portfolio by Lovable
 
-## Project info
+Welcome to my personal portfolio website built to showcase my projects, skills, and experiences as a frontend developer. This portfolio is designed to be clean, modern, and interactive, with smooth transitions and responsive layouts across all devices.
 
-**URL**: https://lovable.dev/projects/502ad2d3-63d5-45c3-b963-cfbc2847d715
+## 🚀 Features
 
-## How can I edit this code?
+- ✅ **Responsive Design** — Optimized for desktop, tablet, and mobile devices.
+- 🎯 **Interactive Timeline** — Clean vertical timeline to highlight work experiences and education.
+- ✨ **Smooth Animations** — Subtle and pleasing transitions for a dynamic experience.
+- 🌗 **Light/Dark Mode** — Toggle between light and dark themes.
+- 🧩 **Project Showcase** — Visually presented projects with hover effects and tech tags.
 
-There are several ways of editing your application.
+## 🛠 Tech Stack
 
-**Use Lovable**
+- ⚛️ **React** — Component-based JavaScript library for building user interfaces
+- 🟦 **TypeScript** — Strongly-typed JavaScript for scalable development
+- 🎨 **Tailwind CSS** — Utility-first CSS framework for responsive styling
+- 🧱 **shadcn/ui** — Accessible and customizable UI components
+- 🌐 **Lovable** — Lightning-fast deployment platform for modern web projects
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/502ad2d3-63d5-45c3-b963-cfbc2847d715) and start prompting.
+## 📦 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+To run this project locally:
 
-**Use your preferred IDE**
+### 1. Clone the repository
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```bash
+git clone https://github.com/your-username/your-portfolio-repo.git
+cd your-portfolio-repo
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 2. Install dependencies
 
-Follow these steps:
+```bash
+npm install
+# or
+yarn install
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 3. Start the development server
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
-```
+# or
+yarn dev
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/502ad2d3-63d5-45c3-b963-cfbc2847d715) and click on Share -> Publish.
+### 4. Open your browser and navigate to http://localhost:3000 to view the site.
