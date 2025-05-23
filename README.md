@@ -44,4 +44,5 @@ npm run dev
 yarn dev
 ```
 
-### 4. Open your browser and navigate to http://localhost:3000 to view the site.
+### 4. Done
+Open your browser and navigate to http://localhost:3000 to view the site.
