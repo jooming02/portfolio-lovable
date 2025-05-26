@@ -24,11 +24,14 @@ const ThemeToggle = () => {
   };
 
   return (
+    // Wrapping the icon in button so that they are focusable and accessible
     <Button variant="outline" size="icon" onClick={toggleTheme} className="rounded-full">
+      {/* you can use either className (text-yellow-400) or color prop to change the colour */}
+      {/* strokeWidth is set to 2 by default */}
       {theme === "dark" ? (
         <Sun className="h-5 w-5 text-yellow-400" />
       ) : (
-        <Moon className="h-5 w-5" />
+        <Moon className="h-5 w-5" strokeWidth={2} />
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>

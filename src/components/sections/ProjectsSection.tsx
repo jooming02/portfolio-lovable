@@ -27,6 +27,13 @@ const ProjectsSection = () => {
             imageUrl="/projects/verifymy.png"
             liveUrl="https://www.figma.com/proto/cgy2n56w7qVCOJulIGNF7M/VerifyMy?node-id=175-1630&scaling=scale-down&page-id=0%3A1&starting-point-node-id=175%3A1630&show-proto-sidebar=1"
           />
+          <ProjectCard
+            title="HeyLaw"
+            description="A web application that simplifies access to Malaysian legal information by providing categorized and searchable law summaries in a user-friendly interface."
+            tags={["Figma"]}
+            imageUrl="/projects/heylaw.png"
+            liveUrl="https://www.figma.com/proto/6ViFgcTwNO71KwSUFjtNPb/Heylaws?node-id=409-281&p=f&t=CvtT7P560C4YCql3-1&scaling=scale-down&content-scaling=fixed&page-id=205%3A1341&starting-point-node-id=409%3A281&show-proto-sidebar=1"
+          />
           {/* <ProjectCard
             title="Weather Dashboard"
             description="A weather application that provides real-time forecasts, location-based suggestions, and historical weather data."
@@ -56,7 +63,7 @@ const ProjectsSection = () => {
             description="A personal portfolio website showcasing projects, skills, and experience with dark mode support and smooth animations."
             tags={["React", "Tailwind CSS", "shadcn-ui", "TypeScript"]}
             imageUrl="/projects/portfolio.png"
-            // liveUrl="https://example.com"
+            liveUrl="https://laujooming.lovable.app/"
             githubUrl="https://github.com/jooming02/portfolio-lovable"
           />
         </div>
