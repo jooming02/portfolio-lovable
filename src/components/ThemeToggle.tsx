@@ -4,12 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
 
 const ThemeToggle = () => {
+  // only allow "light" or "dark" as valid theme values
   const [theme, setTheme] = useState<"light" | "dark">(
     localStorage.getItem("theme") as "light" | "dark" || "dark"
   );
 
   useEffect(() => {
-    const root = window.document.documentElement;
+    const root = window.document.documentElement; // return root <html> element 
+    console.log("Setting root:", root);
     if (theme === "dark") {
       root.classList.add("dark");
       localStorage.setItem("theme", "dark");
@@ -33,6 +35,7 @@ const ThemeToggle = () => {
       ) : (
         <Moon className="h-5 w-5" strokeWidth={2} />
       )}
+      {/* sr-only stand for screen reader only (hide contents visually but accessible for screen reader) */}
       <span className="sr-only">Toggle theme</span>
     </Button>
   );
