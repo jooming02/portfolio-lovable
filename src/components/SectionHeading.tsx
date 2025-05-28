@@ -27,7 +27,7 @@ const SectionHeading = ({
       )} 
       data-animate="true"
     >
-      <h2 className="text-3xl md:text-4xl font-bold mb-3 hero-text-gradient">
+      <h2 className="text-3xl md:text-4xl font-bold mb-3 text-gradient">
         {title}
       </h2>
       {subtitle && (

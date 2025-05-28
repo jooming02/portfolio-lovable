@@ -22,9 +22,6 @@ const AboutSection = () => {
               but I'm also comfortable working with backend technologies. 
               I love learning new technologies and techniques to improve my craft.
             </p>
-            <p>
-              {/* When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new recipes in the kitchen. */}
-            </p>
           </div>
           <div className="flex justify-center">
             <div className="w-64 h-64 rounded-full bg-gradient-to-br from-primary via-primary/60 to-primary/20 flex items-center justify-center">

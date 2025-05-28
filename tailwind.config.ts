@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -80,16 +81,6 @@ export default {
           "0%": { opacity: "1", transform: "translateY(0)" },
           "100%": { opacity: "0", transform: "translateY(10px)" },
         },
-        "wave": {
-          "0%": { transform: "rotate(0.0deg)" },
-          "10%": { transform: "rotate(14.0deg)" },
-          "20%": { transform: "rotate(-8.0deg)" },
-          "30%": { transform: "rotate(14.0deg)" },
-          "40%": { transform: "rotate(-4.0deg)" },
-          "50%": { transform: "rotate(10.0deg)" },
-          "60%": { transform: "rotate(0.0deg)" },
-          "100%": { transform: "rotate(0.0deg)" },
-        },
         "bounce-slow": {
           "0%, 100%": {
             transform: "translateY(-5%)",
@@ -101,8 +92,8 @@ export default {
           },
         },
         "text-shimmer": {
-          from: { backgroundPosition: "0 0" },
-          to: { backgroundPosition: "-200% 0" },
+          from: { backgroundPosition: "0 0" }, //aligned to the left.
+          to: { backgroundPosition: "-200% 0" }, // aligned to the right.
         },
       },
       animation: {
@@ -110,11 +101,10 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out forwards",
         "fade-out": "fade-out 0.5s ease-out forwards",
-        "wave": "wave 2s linear infinite",
         "bounce-slow": "bounce-slow 3s infinite",
         "text-shimmer": "text-shimmer 2s ease-in-out infinite",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;

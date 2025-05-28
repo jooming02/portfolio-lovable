@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { cn } from "@/lib/utils";
+import { Menu, X } from 'lucide-react';
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -56,10 +57,11 @@ const Navbar = () => {
           : "bg-transparent py-4"
       )}
     >
+      {/* justify-between space out the child, first on left, last on right, and space in between is evenly distributed */}
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a 
           href="#home" 
-          className="text-xl md:text-2xl font-bold hero-text-gradient"
+          className="text-xl md:text-2xl font-bold text-gradient"
           onClick={(e) => {
             e.preventDefault();
             scrollToSection("home");
@@ -73,13 +75,12 @@ const Navbar = () => {
           className="md:hidden p-2 rounded-md hover:bg-accent"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            {isMobileMenuOpen ? (
-              <path d="M18 6L6 18M6 6l12 12" />
+          {isMobileMenuOpen ? (
+              <X size={24} strokeWidth={2} />
             ) : (
-              <path d="M3 12h18M3 6h18M3 18h18" />
+              <Menu size={24} strokeWidth={2} />
             )}
-          </svg>
+
         </button>
 
         {/* Desktop menu */}
@@ -108,7 +109,7 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-[62px] bg-background/95 backdrop-blur-sm z-50 animate-fade-in">
+          <div className="md:hidden fixed inset-0 top-[62px] bg-background/75 backdrop-blur-sm z-50 animate-fade-in">
             <nav className="h-full flex flex-col p-8">
               <ul className="flex flex-col space-y-4">
                 {navItems.map((item) => (

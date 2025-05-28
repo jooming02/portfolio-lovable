@@ -8,18 +8,21 @@ interface AnimatedTitleProps {
 }
 
 const AnimatedTitle = ({ text, className }: AnimatedTitleProps) => {
-  const containerRef = useRef<HTMLHeadingElement>(null);
+  // This ref will be used to observe the visibility of the title element
+  const containerRef = useRef<HTMLHeadingElement>(null); //h1, h2, h3, etc.
 
   useEffect(() => {
+    // Create an IntersectionObserver to observe the container
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // console.log("Observing:", containerRef.current);
             entry.target.classList.add("animated");
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 } // at least 10% of the element is visible
     );
 
     if (containerRef.current) {

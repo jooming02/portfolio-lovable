@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div className="max-w-7xl w-full mx-auto flex flex-col items-center text-center">
         <div className="mb-8">
           <span className="inline-block text-lg md:text-xl mb-4">
-            <span className="wave-hand animate-wave">👋</span> Hi there, I'm
+            <span className="animate-wave">👋</span> Hi there, I'm
           </span>
           <AnimatedTitle
             text="React Developer"

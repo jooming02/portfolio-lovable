@@ -74,7 +74,7 @@
     transform: translateY(0);
   }
 
-  .hero-text-gradient {
+  .text-gradient {
     @apply bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent;
   }
 }
@@ -129,13 +129,6 @@
   z-index: 1;
 }
 
-.wave-hand {
-  display: inline-block;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
-}
-
 /* Keep existing wave animation */
 @keyframes wave {
   0% { transform: rotate(0.0deg); }
@@ -150,6 +143,10 @@
 
 .animate-wave {
   animation-name: wave;
+  display: inline-block;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
 }
 
 /* Hover animation for skill cards */
