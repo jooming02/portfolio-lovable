@@ -2,7 +2,9 @@
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import GitHubIcon from "@/components/icons/GitHubIcon";
+import LinkedInIcon from "@/components/icons/LinkedInIcon";
 
 const ContactSection = () => {
   return (
@@ -32,7 +34,7 @@ const ContactSection = () => {
               
               <div className="flex items-center gap-3">
                 <Button variant="outline" size="icon" className="rounded-full">
-                  <Linkedin className="h-4 w-4" />
+                  <LinkedInIcon className="h-4 w-4" />
                 </Button>
                 <a
                   href="https://www.linkedin.com/in/joo-ming-lau-974804235/"
@@ -46,7 +48,7 @@ const ContactSection = () => {
               
               <div className="flex items-center gap-3">
                 <Button variant="outline" size="icon" className="rounded-full">
-                  <Github className="h-4 w-4" />
+                  <GitHubIcon className="h-4 w-4" />
                 </Button>
                 <a
                   href="https://github.com/jooming02"

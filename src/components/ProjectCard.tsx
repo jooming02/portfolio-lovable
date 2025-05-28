@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Github } from "lucide-react";
+import GitHubIcon from "@/components/icons/GitHubIcon";
 
 interface ProjectCardProps {
   title: string;
@@ -63,7 +63,7 @@ const ProjectCard = ({
             asChild
           >
             <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-              <Github size={16} />
+              <GitHubIcon className="w-4 h-4" />
               <span>Code</span>
             </a>
           </Button>

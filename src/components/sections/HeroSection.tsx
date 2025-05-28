@@ -1,7 +1,9 @@
 
 import AnimatedTitle from "@/components/AnimatedTitle";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import GitHubIcon from "@/components/icons/GitHubIcon";
+import LinkedInIcon from "@/components/icons/LinkedInIcon";
 
 const HeroSection = () => {
   return (
@@ -36,13 +38,13 @@ const HeroSection = () => {
         <div className="flex gap-4 mt-8">
           <Button variant="ghost" size="icon" asChild className="rounded-full">
             <a href="https://github.com/jooming02" target="_blank" rel="noopener noreferrer">
-              <Github className="w-5 h-5" />
+              <GitHubIcon className="w-5 h-5" />
               <span className="sr-only">GitHub</span>
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild className="rounded-full">
             <a href="https://www.linkedin.com/in/joo-ming-lau-974804235/" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="w-5 h-5" />
+              <LinkedInIcon className="w-5 h-5" />
               <span className="sr-only">LinkedIn</span>
             </a>
           </Button>
