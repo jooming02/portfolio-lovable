@@ -7,7 +7,7 @@ const SkillsSection = () => {
     <section id="skills" className="py-20 px-4 md:px-6 bg-accent/30">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
-          title="My Skills"
+          title="My Skillsss"
           subtitle="Technologies and tools I work with"
         />
 
