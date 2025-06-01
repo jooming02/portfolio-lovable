@@ -27,7 +27,7 @@ const ScrollToTop = () => {
       variant="outline"
       size="icon"
       className={`fixed bottom-4 right-4 rounded-full opacity-0 shadow-md transition-all duration-300 ${
-        showButton ? "opacity-100 translate-y-0" : "translate-y-10"
+        showButton ? "opacity-100 translate-y-0" :  "translate-y-10"
       }`}
       onClick={scrollToTop}
     >
