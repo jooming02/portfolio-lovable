@@ -6,7 +6,7 @@ const FooterSection = () => {
           © {new Date().getFullYear()} Portfolio. All rights reserved.
         </p>
         <p className="text-xs text-muted-foreground">
-          Last updated: 22/5/2025
+          Last updated: 2/6/2025
         </p>
       </div>
     </footer>
