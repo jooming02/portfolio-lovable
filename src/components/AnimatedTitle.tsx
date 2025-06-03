@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { cn } from "@/lib/utils";
 
 interface AnimatedTitleProps {
@@ -10,31 +10,6 @@ interface AnimatedTitleProps {
 const AnimatedTitle = ({ text, className }: AnimatedTitleProps) => {
   // This ref will be used to observe the visibility of the title element
   const containerRef = useRef<HTMLHeadingElement>(null); //h1, h2, h3, etc.
-
-  useEffect(() => {
-    // Create an IntersectionObserver to observe the container
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // console.log("Observing:", containerRef.current);
-            entry.target.classList.add("animated");
-          }
-        });
-      },
-      { threshold: 0.1 } // at least 10% of the element is visible
-    );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
-    };
-  }, []);
 
   return (
     <div className="overflow-hidden">
