@@ -2,6 +2,12 @@
 
 Welcome to my personal portfolio website built to showcase my projects, skills, and experiences as a frontend developer. This portfolio is designed to be clean, modern, and interactive, with smooth transitions and responsive layouts across all devices.
 
+## 🚀 Live Preview
+
+> https://laujooming.lovable.app/
+
+---
+
 ## 🚀 Features
 
 - 🧩 **Project Showcase** — Visually presented projects with live demo, github link and tech tags.
