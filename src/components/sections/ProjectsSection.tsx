@@ -66,6 +66,14 @@ const ProjectsSection = () => {
             liveUrl="https://laujooming.lovable.app/"
             githubUrl="https://github.com/jooming02/portfolio-lovable"
           />
+          <ProjectCard
+            title="Gaming Dashboard"
+            description="A dashboard that simulates the game analytics environment. It features a fully interactive leaderboard for over 10,000 players, complete with search, sort, pagination, and visual indicators."
+            tags={["React", "Tailwind CSS", "TypeScript", "rechart", "tanstack-table"]}
+            imageUrl="/projects/gamingdashboard.png"
+            liveUrl="https://gaming-dashboard.lovable.app/"
+            githubUrl="https://github.com/jooming02/gaming-dashboard"
+          />
         </div>
       </div>
     </section>
