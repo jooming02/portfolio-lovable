@@ -8,6 +8,7 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Show the button if the user has scrolled down more than one viewport height
       setShowButton(window.scrollY > window.innerHeight);
     };
 

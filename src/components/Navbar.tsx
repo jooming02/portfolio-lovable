@@ -19,11 +19,13 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    // Handle scroll event to update active section and navbar style
     const handleScroll = () => {
       const sections = document.querySelectorAll("section[id]");
       const scrollPosition = window.scrollY + window.innerHeight / 3;
 
       sections.forEach((section) => {
+        // Get the top position and height of each section
         const sectionTop = (section as HTMLElement).offsetTop;
         const sectionHeight = (section as HTMLElement).offsetHeight;
         const sectionId = section.getAttribute("id") || "";
@@ -41,6 +43,7 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    // in each section, we have set the id attribute to match the navItems id
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

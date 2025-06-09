@@ -63,6 +63,7 @@
     scroll-behavior: smooth;
   }
 
+  /* transition for each section */
   [data-animate="true"] {
     opacity: 0;
     transform: translateY(20px);
