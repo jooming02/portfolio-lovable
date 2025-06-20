@@ -1,6 +1,6 @@
 
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Sphere, Box, Torus } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
@@ -21,38 +21,46 @@ const AnimatedCharacter = () => {
   return (
     <group ref={meshRef}>
       {/* Head */}
-      <Sphere ref={headRef} args={[0.8]} position={[0, 1.5, 0]}>
+      <mesh ref={headRef} position={[0, 1.5, 0]}>
+        <sphereGeometry args={[0.8, 32, 32]} />
         <meshStandardMaterial color="#8B5CF6" />
-      </Sphere>
+      </mesh>
       
       {/* Body */}
-      <Box args={[1, 1.5, 0.5]} position={[0, 0, 0]}>
+      <mesh position={[0, 0, 0]}>
+        <boxGeometry args={[1, 1.5, 0.5]} />
         <meshStandardMaterial color="#6366F1" />
-      </Box>
+      </mesh>
       
       {/* Arms */}
-      <Box args={[0.3, 1, 0.3]} position={[-0.8, 0.2, 0]}>
+      <mesh position={[-0.8, 0.2, 0]}>
+        <boxGeometry args={[0.3, 1, 0.3]} />
         <meshStandardMaterial color="#4F46E5" />
-      </Box>
-      <Box args={[0.3, 1, 0.3]} position={[0.8, 0.2, 0]}>
+      </mesh>
+      <mesh position={[0.8, 0.2, 0]}>
+        <boxGeometry args={[0.3, 1, 0.3]} />
         <meshStandardMaterial color="#4F46E5" />
-      </Box>
+      </mesh>
       
       {/* Legs */}
-      <Box args={[0.3, 1.2, 0.3]} position={[-0.3, -1.5, 0]}>
+      <mesh position={[-0.3, -1.5, 0]}>
+        <boxGeometry args={[0.3, 1.2, 0.3]} />
         <meshStandardMaterial color="#3730A3" />
-      </Box>
-      <Box args={[0.3, 1.2, 0.3]} position={[0.3, -1.5, 0]}>
+      </mesh>
+      <mesh position={[0.3, -1.5, 0]}>
+        <boxGeometry args={[0.3, 1.2, 0.3]} />
         <meshStandardMaterial color="#3730A3" />
-      </Box>
+      </mesh>
       
       {/* Floating elements around character */}
-      <Torus args={[0.3, 0.1]} position={[-2, 2, 0]} rotation={[Math.PI / 2, 0, 0]}>
+      <mesh position={[-2, 2, 0]} rotation={[Math.PI / 2, 0, 0]}>
+        <torusGeometry args={[0.3, 0.1, 16, 100]} />
         <meshStandardMaterial color="#EC4899" />
-      </Torus>
-      <Torus args={[0.25, 0.08]} position={[2, 1, 0]} rotation={[0, Math.PI / 4, 0]}>
+      </mesh>
+      <mesh position={[2, 1, 0]} rotation={[0, Math.PI / 4, 0]}>
+        <torusGeometry args={[0.25, 0.08, 16, 100]} />
         <meshStandardMaterial color="#10B981" />
-      </Torus>
+      </mesh>
     </group>
   );
 };
