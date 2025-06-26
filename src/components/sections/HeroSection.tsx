@@ -31,7 +31,16 @@ const HeroSection = () => {
 
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-8">
                 <Button asChild>
-                  <a href="#projects">View My Work</a>
+                  {/* download can be used to directly download */}
+                  {/* <a href="/public/CV_LauJooMing.pdf" download> Resume </a> */}
+
+                  {/* Open the resume in next tab */}
+                  <a href="/CV_LauJooMing.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  > 
+                    Resume
+                  </a>
                 </Button>
                 <Button variant="outline" asChild>
                   <a href="#contact">Get In Touch</a>
