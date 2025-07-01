@@ -95,6 +95,15 @@ export default {
           from: { backgroundPosition: "0 0" }, //aligned to the left.
           to: { backgroundPosition: "-200% 0" }, // aligned to the right.
         },
+        shine: {
+           '0%': { 'background-position': '100%' },
+           '100%': { 'background-position': '-100%' },
+         },
+         gradient: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -103,6 +112,8 @@ export default {
         "fade-out": "fade-out 0.5s ease-out forwards",
         "bounce-slow": "bounce-slow 3s infinite",
         "text-shimmer": "text-shimmer 2s ease-in-out infinite",
+        shine: 'shine 5s linear infinite',
+        gradient: 'gradient 8s linear infinite',
       },
     },
   },
