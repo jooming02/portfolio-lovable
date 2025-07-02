@@ -1,8 +1,8 @@
-
 import { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { cn } from "@/lib/utils";
-import { Menu, X } from 'lucide-react';
+import { Menu, X } from "lucide-react";
+import GradientText from "@/components/ui/TextAnimations/GradientText";
 
 const navItems = [
   { id: "home", label: "Home" },
@@ -30,7 +30,10 @@ const Navbar = () => {
         const sectionHeight = (section as HTMLElement).offsetHeight;
         const sectionId = section.getAttribute("id") || "";
 
-        if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition <= sectionTop + sectionHeight
+        ) {
           setActiveSection(sectionId);
         }
       });
@@ -62,28 +65,31 @@ const Navbar = () => {
     >
       {/* justify-between space out the child, first on left, last on right, and space in between is evenly distributed */}
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a 
-          href="#home" 
-          className="text-xl md:text-2xl font-bold text-gradient"
+        <a
+          href="#home"
           onClick={(e) => {
             e.preventDefault();
             scrollToSection("home");
           }}
         >
-          Portfolio
+          <GradientText
+            animationSpeed={5}
+            className="text-xl md:text-2xl font-bold text-gradient"
+          >
+            Portfolio
+          </GradientText>
         </a>
 
         {/* Mobile menu button */}
-        <button 
+        <button
           className="md:hidden p-2 rounded-md hover:bg-accent"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
-              <X size={24} strokeWidth={2} />
-            ) : (
-              <Menu size={24} strokeWidth={2} />
-            )}
-
+            <X size={24} strokeWidth={2} />
+          ) : (
+            <Menu size={24} strokeWidth={2} />
+          )}
         </button>
 
         {/* Desktop menu */}
@@ -95,12 +101,17 @@ const Navbar = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={cn(
                     "px-3 py-2 rounded-md text-sm transition-colors",
-                    activeSection === item.id
-                      ? "text-primary font-medium"
-                      : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                    activeSection !== item.id &&
+                      "text-muted-foreground hover:text-foreground hover:bg-accent"
                   )}
                 >
-                  {item.label}
+                  {activeSection === item.id ? (
+                    <GradientText className="font-medium text-sm">
+                      {item.label}
+                    </GradientText>
+                  ) : (
+                    item.label
+                  )}
                 </button>
               </li>
             ))}

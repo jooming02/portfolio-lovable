@@ -1,5 +1,5 @@
-
 import { cn } from "@/lib/utils";
+import GradientText from "@/components/ui/TextAnimations/GradientText";
 
 interface SectionHeadingProps {
   title: string;
@@ -8,28 +8,31 @@ interface SectionHeadingProps {
   align?: "left" | "center" | "right";
 }
 
-const SectionHeading = ({ 
-  title, 
-  subtitle, 
+const SectionHeading = ({
+  title,
+  subtitle,
   className,
-  align = "center" 
+  align = "center",
 }: SectionHeadingProps) => {
   return (
-    <div 
+    <div
       className={cn(
-        "mb-12", 
+        "mb-12",
         {
           "text-center": align === "center",
           "text-left": align === "left",
-          "text-right": align === "right"
+          "text-right": align === "right",
         },
         className
-      )} 
+      )}
       data-animate="true"
     >
-      <h2 className="text-3xl md:text-4xl font-bold mb-3 text-gradient">
+      <GradientText
+        animationSpeed={5}
+        className="text-3xl md:text-4xl font-bold mb-3 text-gradient"
+      >
         {title}
-      </h2>
+      </GradientText>
       {subtitle && (
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           {subtitle}

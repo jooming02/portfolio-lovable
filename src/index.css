@@ -28,7 +28,7 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%; /* dark blue-gray */
+    --background: 240 30% 13%; /* dark blue-gray */
     --foreground: 0 0% 98%; /* Main text color: light blue-gray */
     --card: 240 10% 3.9%; /* dark blue-gray */
     --card-foreground: 0 0% 98%;
