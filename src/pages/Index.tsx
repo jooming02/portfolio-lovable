@@ -9,6 +9,8 @@ import ContactSection from "@/components/sections/ContactSection";
 import FooterSection from "@/components/sections/FooterSection";
 import useAnimations from "@/hooks/useAnimations";
 import ClickSpark from "../components/ui/ClickSpark";
+import Particles from "@/components/ui/Backgrounds/Particles";
+import { BackgroundGradientAnimation } from "@/components/ui/Backgrounds/BackgroundGradientAnimation";
 import { primaryColor } from "@/lib/colors";
 
 const Index = () => {
@@ -26,12 +28,18 @@ const Index = () => {
       >
         <Navbar />
         <HeroSection />
-        <AboutSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <ExperienceSection />
-        <ContactSection />
-        <FooterSection />
+
+        {/* <BackgroundGradientAnimation className="z-0">
+          <div className="relative z-10"> */}
+            <AboutSection />
+            <ProjectsSection />
+            <SkillsSection />
+            <ExperienceSection />
+            <ContactSection />
+            <FooterSection />
+          {/* </div> */}
+        {/* </BackgroundGradientAnimation> */}
+
         <ScrollToTop />
       </ClickSpark>
     </div>

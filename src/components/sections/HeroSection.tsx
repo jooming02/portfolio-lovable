@@ -16,7 +16,7 @@ const HeroSection = () => {
       {/* Background Particles */}
       <div className="absolute inset-0 -z-10">
         <Particles
-          particleColors={["#ffffff", "#9D05F5", "#F505E1"]} //purple color
+          particleColors={["#ffffff", "#9D05F5", "#F505E1"]} //purple color and pink
           particleCount={500}
           particleSpread={10}
           speed={0.1}
@@ -33,14 +33,14 @@ const HeroSection = () => {
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <div className="mb-8">
               <span className="inline-block text-lg md:text-xl mb-4">
-                <span className="animate-wave">👋</span> Hi there, I'm
+                Hi, I'm
               </span>
               <AnimatedTitle
-                text="React Developer"
+                text="Lau Joo Ming"
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
               />
               <h2 className="text-xl md:text-2xl mb-6 text-muted-foreground">
-                Full Stack Developer | UI/UX Enthusiast | Problem Solver
+                Frontend Developer | UI/UX Enthusiast
               </h2>
               <p className="max-w-2xl text-muted-foreground">
                 I build accessible, responsive, and performant web applications
