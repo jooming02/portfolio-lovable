@@ -1,3 +1,4 @@
+
 "use client";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
@@ -9,7 +10,6 @@ export const BackgroundGradientAnimation = ({
   secondColor = "221, 74, 255",
   thirdColor = "100, 220, 255",
   fourthColor = "200, 50, 50",
-  // fifthColor = "180, 180, 50",
   pointerColor = "140, 100, 255",
   size = "20%",
   blendingValue = "hard-light",
@@ -17,6 +17,7 @@ export const BackgroundGradientAnimation = ({
   className,
   interactive = false,
   containerClassName,
+  fullHeight = true,
 }: {
   gradientBackgroundStart?: string;
   gradientBackgroundEnd?: string;
@@ -32,6 +33,7 @@ export const BackgroundGradientAnimation = ({
   className?: string;
   interactive?: boolean;
   containerClassName?: string;
+  fullHeight?: boolean;
 }) => {
   const interactiveRef = useRef<HTMLDivElement>(null);
 
@@ -39,6 +41,7 @@ export const BackgroundGradientAnimation = ({
   const [curY, setCurY] = useState(0);
   const [tgX, setTgX] = useState(0);
   const [tgY, setTgY] = useState(0);
+  
   useEffect(() => {
     document.body.style.setProperty(
       "--gradient-background-start",
@@ -52,7 +55,6 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--second-color", secondColor);
     document.body.style.setProperty("--third-color", thirdColor);
     document.body.style.setProperty("--fourth-color", fourthColor);
-    // document.body.style.setProperty("--fifth-color", fifthColor);
     document.body.style.setProperty("--pointer-color", pointerColor);
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
@@ -89,7 +91,9 @@ export const BackgroundGradientAnimation = ({
   return (
     <div
       className={cn(
-        "h-screen w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
+        "relative overflow-hidden",
+        fullHeight ? "h-screen w-screen top-0 left-0" : "w-full h-full",
+        "bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
         containerClassName
       )}
     >
@@ -111,10 +115,10 @@ export const BackgroundGradientAnimation = ({
           </filter>
         </defs>
       </svg>
-      <div className={cn("", className)}>{children}</div>
+      <div className={cn("relative z-10", className)}>{children}</div>
       <div
         className={cn(
-          "gradients-container h-full w-full blur-lg",
+          "gradients-container h-full w-full blur-lg absolute inset-0 z-0",
           isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(40px)]"
         )}
       >
@@ -152,15 +156,6 @@ export const BackgroundGradientAnimation = ({
             `[transform-origin:calc(50%-200px)]`,
             `animate-fourth`,
             `opacity-70`
-          )}
-        ></div>
-        <div
-          className={cn(
-            `absolute [background:radial-gradient(circle_at_center,_rgba(var(--fifth-color),_0.8)_0,_rgba(var(--fifth-color),_0)_50%)_no-repeat]`,
-            `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
-            `[transform-origin:calc(50%-800px)_calc(50%+800px)]`,
-            `animate-fifth`,
-            `opacity-100`
           )}
         ></div>
 
