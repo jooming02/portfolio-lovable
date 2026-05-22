@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import GitHubIcon from "@/components/icons/GitHubIcon";
 import LinkedInIcon from "@/components/icons/LinkedInIcon";
-import ThreeCharacter from "@/components/ThreeCharacter";
+import Lanyard from "@/components/ui/Animations/Lanyard/Lanyard";
 import ScrollVelocity from "@/components/ui/TextAnimations/ScrollVelocity";
 import Particles from "@/components/ui/Backgrounds/Particles";
 
