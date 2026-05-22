@@ -112,9 +112,18 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side - 3D Character */}
-          <div className="h-[400px] lg:h-[600px] w-full">
-            <ThreeCharacter />
+          {/* Right side - Interactive 3D Lanyard */}
+          <div className="h-[500px] lg:h-[650px] w-full">
+            <Lanyard
+              position={[0, 0, 18]}
+              fov={20}
+              cardInfo={{
+                name: "Lau Joo Ming",
+                title: "Frontend Developer",
+                tagline: "UI/UX Enthusiast",
+                website: "laujooming.lovable.app",
+              }}
+            />
           </div>
         </div>
       </div>
