@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Canvas, extend, useFrame } from '@react-three/fiber';
 import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei';
 import {
@@ -20,6 +20,20 @@ import cardGLB from './card.glb';
 import lanyard from './lanyard.png';
 
 extend({ MeshLineGeometry, MeshLineMaterial });
+
+declare module '@react-three/fiber' {
+  interface ThreeElements {
+    meshLineGeometry: any;
+    meshLineMaterial: any;
+  }
+}
+
+export interface CardInfo {
+  name?: string;
+  title?: string;
+  tagline?: string;
+  website?: string;
+}
 
 interface LanyardProps {
   position?: [number, number, number];
