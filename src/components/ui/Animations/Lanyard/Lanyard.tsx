@@ -109,9 +109,10 @@ interface BandProps {
   maxSpeed?: number;
   minSpeed?: number;
   isMobile?: boolean;
+  cardInfo?: CardInfo;
 }
 
-function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }: BandProps) {
+function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false, cardInfo }: BandProps) {
   // Using "any" for refs since the exact types depend on Rapier's internals
   const band = useRef<any>(null);
   const fixed = useRef<any>(null);
@@ -135,6 +136,95 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false }: BandProps) {
 
   const { nodes, materials } = useGLTF(cardGLB) as any;
   const texture = useTexture(lanyard);
+
+  // Generate a custom card texture with user's info
+  const cardTexture = useMemo(() => {
+    const w = 512;
+    const h = 720;
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext('2d')!;
+
+    // Background gradient (violet-purple, matching site theme)
+    const grad = ctx.createLinearGradient(0, 0, w, h);
+    grad.addColorStop(0, '#1a0b2e');
+    grad.addColorStop(0.5, '#2d1657');
+    grad.addColorStop(1, '#0f0524');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, w, h);
+
+    // Subtle glow blob
+    const blob = ctx.createRadialGradient(w * 0.7, h * 0.25, 10, w * 0.7, h * 0.25, 320);
+    blob.addColorStop(0, 'rgba(157, 5, 245, 0.55)');
+    blob.addColorStop(1, 'rgba(157, 5, 245, 0)');
+    ctx.fillStyle = blob;
+    ctx.fillRect(0, 0, w, h);
+
+    const blob2 = ctx.createRadialGradient(w * 0.2, h * 0.85, 10, w * 0.2, h * 0.85, 280);
+    blob2.addColorStop(0, 'rgba(245, 5, 225, 0.4)');
+    blob2.addColorStop(1, 'rgba(245, 5, 225, 0)');
+    ctx.fillStyle = blob2;
+    ctx.fillRect(0, 0, w, h);
+
+    // Border
+    ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+    ctx.lineWidth = 4;
+    ctx.strokeRect(8, 8, w - 16, h - 16);
+
+    // Top label
+    ctx.fillStyle = 'rgba(255,255,255,0.6)';
+    ctx.font = '600 22px Inter, system-ui, sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText('PORTFOLIO', 40, 70);
+
+    // Small dot accent
+    ctx.fillStyle = '#9D05F5';
+    ctx.beginPath();
+    ctx.arc(w - 50, 62, 8, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Name
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '700 56px Inter, system-ui, sans-serif';
+    ctx.textAlign = 'center';
+    const name = cardInfo?.name ?? 'Lau Joo Ming';
+    ctx.fillText(name, w / 2, h / 2 - 20);
+
+    // Title
+    ctx.fillStyle = 'rgba(255,255,255,0.85)';
+    ctx.font = '500 26px Inter, system-ui, sans-serif';
+    const title = cardInfo?.title ?? 'Frontend Developer';
+    ctx.fillText(title, w / 2, h / 2 + 30);
+
+    // Divider
+    ctx.strokeStyle = 'rgba(157, 5, 245, 0.8)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(w / 2 - 60, h / 2 + 60);
+    ctx.lineTo(w / 2 + 60, h / 2 + 60);
+    ctx.stroke();
+
+    // Tagline
+    ctx.fillStyle = 'rgba(255,255,255,0.65)';
+    ctx.font = 'italic 20px Inter, system-ui, sans-serif';
+    const tagline = cardInfo?.tagline ?? 'UI/UX Enthusiast';
+    ctx.fillText(tagline, w / 2, h / 2 + 100);
+
+    // Bottom website
+    ctx.fillStyle = 'rgba(255,255,255,0.55)';
+    ctx.font = '500 18px Inter, system-ui, sans-serif';
+    ctx.textAlign = 'center';
+    const site = cardInfo?.website ?? 'laujooming.lovable.app';
+    ctx.fillText(site, w / 2, h - 50);
+
+    const tex = new THREE.CanvasTexture(canvas);
+    tex.colorSpace = THREE.SRGBColorSpace;
+    tex.anisotropy = 16;
+    tex.needsUpdate = true;
+    return tex;
+  }, [cardInfo?.name, cardInfo?.title, cardInfo?.tagline, cardInfo?.website]);
+
   const [curve] = useState(
     () =>
       new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()])
