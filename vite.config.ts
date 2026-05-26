@@ -11,8 +11,20 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && (() => {
+      const tagger = componentTagger();
+      const originalTransform = tagger.transform;
+      // Skip tagging files that render react-three-fiber / rapier JSX,
+      // because lovable-tagger injects `data-lov-id` props which R3F
+      // treats as object paths (data.lov.id) and crashes at runtime.
+      tagger.transform = function (code: string, id: string) {
+        if (id.includes('/Lanyard/') || id.includes('ThreeCharacter')) {
+          return null;
+        }
+        return (originalTransform as any).call(this, code, id);
+      };
+      return tagger;
+    })(),
   ].filter(Boolean),
   resolve: {
     alias: {
