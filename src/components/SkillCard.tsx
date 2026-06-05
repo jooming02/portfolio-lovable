@@ -1,4 +1,4 @@
-import SpotlightCard from './ui/SpotlightCard';
+import SpotlightCard from "@/components/effects/SpotlightCard";
 import { primaryColor } from "@/lib/colors";
 
 interface SkillCardProps {

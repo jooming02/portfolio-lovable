@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import GitHubIcon from "@/components/icons/GitHubIcon";
 import LinkedInIcon from "@/components/icons/LinkedInIcon";
-import Lanyard from "@/components/ui/Animations/Lanyard/Lanyard";
-import ScrollVelocity from "@/components/ui/TextAnimations/ScrollVelocity";
-import Particles from "@/components/ui/Backgrounds/Particles";
+import Lanyard from "@/components/effects/lanyard/Lanyard";
+import ScrollVelocity from "@/components/effects/text/ScrollVelocity";
+import Particles from "@/components/effects/backgrounds/Particles";
 
 const HeroSection = () => {
   return (

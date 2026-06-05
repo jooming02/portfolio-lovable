@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import GradientText from "@/components/ui/TextAnimations/GradientText";
+import GradientText from "@/components/effects/text/GradientText";
 
 const navItems = [
   { id: "home", label: "Home" },

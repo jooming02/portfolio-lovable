@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import GradientText from "@/components/ui/TextAnimations/GradientText";
+import GradientText from "@/components/effects/text/GradientText";
 
 interface SectionHeadingProps {
   title: string;

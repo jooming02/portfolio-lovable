@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => ({
       // because lovable-tagger injects `data-lov-id` props which R3F
       // treats as object paths (data.lov.id) and crashes at runtime.
       tagger.transform = function (code: string, id: string) {
-        if (id.includes('/Lanyard/') || id.includes('ThreeCharacter')) {
+        if (id.includes('/effects/lanyard/')) {
           return null;
         }
         return (originalTransform as any).call(this, code, id);

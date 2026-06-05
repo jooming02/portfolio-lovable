@@ -8,13 +8,10 @@ import ExperienceSection from "@/components/sections/ExperienceSection";
 import ContactSection from "@/components/sections/ContactSection";
 import FooterSection from "@/components/sections/FooterSection";
 import useAnimations from "@/hooks/useAnimations";
-import ClickSpark from "../components/ui/ClickSpark";
-import Particles from "@/components/ui/Backgrounds/Particles";
-import { BackgroundGradientAnimation } from "@/components/ui/Backgrounds/BackgroundGradientAnimation";
+import ClickSpark from "@/components/effects/ClickSpark";
 import { primaryColor } from "@/lib/colors";
 
 const Index = () => {
-  // Initialize animations
   useAnimations();
 
   return (
@@ -28,18 +25,12 @@ const Index = () => {
       >
         <Navbar />
         <HeroSection />
-
-        {/* <BackgroundGradientAnimation className="z-0">
-          <div className="relative z-10"> */}
-            <AboutSection />
-            <ProjectsSection />
-            <SkillsSection />
-            <ExperienceSection />
-            <ContactSection />
-            <FooterSection />
-          {/* </div> */}
-        {/* </BackgroundGradientAnimation> */}
-
+        <AboutSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <ContactSection />
+        <FooterSection />
         <ScrollToTop />
       </ClickSpark>
     </div>
