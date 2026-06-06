@@ -28,16 +28,16 @@ export const CARD_LAYOUT = {
 
 /** Fonts to preload before drawing the canvas texture */
 export const CARD_FONTS = [
-  { family: "Outfit", weight: 700 },
-  { family: "Inter", weight: 600 },
-  { family: "Inter", weight: 500 },
+  { family: "Cormorant Garamond", weight: 600 },
+  { family: "Source Sans 3", weight: 600 },
+  { family: "Source Sans 3", weight: 500 },
   { family: "JetBrains Mono", weight: 500 },
 ] as const;
 
 /** Colors and canvas styling — edit here to restyle the badge */
 export const CARD_THEME = {
-  fontDisplay: '"Outfit", system-ui, sans-serif',
-  fontBody: '"Inter", system-ui, sans-serif',
+  fontDisplay: '"Cormorant Garamond", serif',
+  fontBody: '"Source Sans 3", sans-serif',
   fontMono: '"JetBrains Mono", monospace',
   background: ["#1a0b2e", "#2d1657", "#0f0524"] as const,
   border: "rgba(255,255,255,0.12)",

@@ -32,12 +32,9 @@ const HeroSection = () => {
           {/* Left side - Content */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <div className="mb-8">
-              <span className="inline-block text-lg md:text-xl mb-4">
-                Hi, I'm
-              </span>
               <AnimatedTitle
                 text="Lau Joo Ming"
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+                className="text-4xl/[1.25] md:text-5xl/[1.25] lg:text-6xl/[1.25] font-bold mb-6"
               />
               <h2 className="text-xl md:text-2xl mb-6 text-muted-foreground">
                 Frontend Developer | UI/UX Enthusiast

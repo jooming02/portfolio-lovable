@@ -74,7 +74,7 @@ const Navbar = () => {
         >
           <GradientText
             animationSpeed={5}
-            className="text-xl md:text-2xl font-bold text-gradient"
+            className="font-display text-xl md:text-2xl font-bold text-gradient"
           >
             Portfolio
           </GradientText>
@@ -106,7 +106,7 @@ const Navbar = () => {
                   )}
                 >
                   {activeSection === item.id ? (
-                    <GradientText className="font-medium text-sm">
+                    <GradientText className="font-display font-medium text-sm">
                       {item.label}
                     </GradientText>
                   ) : (

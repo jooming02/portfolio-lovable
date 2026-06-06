@@ -29,7 +29,7 @@ const SectionHeading = ({
     >
       <GradientText
         animationSpeed={5}
-        className="text-3xl md:text-4xl font-bold mb-3 text-gradient"
+        className="font-display text-3xl md:text-4xl font-bold mb-3 text-gradient"
       >
         {title}
       </GradientText>
