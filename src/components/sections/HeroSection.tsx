@@ -115,12 +115,18 @@ const HeroSection = () => {
           {/* Right side - Interactive 3D Lanyard */}
           <div className="h-[500px] lg:h-[650px] w-full">
             <Lanyard
+              // Camera position in 3D space: [x, y, z]
+              // x=0 → centered left/right
+              // y=0 → centered up/down
+              // z=18 → camera sits 18 units BACK from the scene origin (0,0,0), looking toward the card
               position={[0, 0, 18]}
+              // Field of view in degrees — lens "zoom angle"
+              // lower (e.g. 15) = narrower view = card looks bigger / more zoomed in
+              // higher (e.g. 35) = wider view = card looks smaller / more zoomed out
               fov={20}
               cardInfo={{
                 name: "Lau Joo Ming",
                 title: "Frontend Developer",
-                tagline: "UI/UX Enthusiast",
                 website: "laujooming.lovable.app",
               }}
             />
