@@ -70,71 +70,9 @@
     scroll-behavior: smooth;
   }
 
-  /* transition for each section */
-  [data-animate="true"] {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  [data-animate="true"].animated {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent;
   }
-}
-
-/* New Timeline Styles */
-.timeline-container {
-  position: relative;
-}
-
-.timeline-line {
-  position: absolute;
-  left: 20px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: hsl(var(--muted-foreground)/0.3);
-}
-
-.timeline-line-progress {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 0;
-  background-color: hsl(var(--primary));
-  transition: height 1.5s ease-in-out;
-}
-
-.timeline-line-grow .timeline-line-progress {
-  height: 100%;
-}
-
-.timeline-item {
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.timeline-item-visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.timeline-dot {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-color: hsl(var(--primary));
-  border-radius: 50%;
-  left: -32px;
-  top: 24px;
-  z-index: 1;
 }
 
 /* Keep existing wave animation */

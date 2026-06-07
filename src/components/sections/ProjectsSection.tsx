@@ -1,6 +1,9 @@
 
+import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import ProjectCard from "@/components/ProjectCard";
+import Stagger from "@/components/motion/Stagger";
+import { scaleIn } from "@/components/motion/variants";
 import { projects } from "@/data/projects";
 
 const ProjectsSection = () => {
@@ -12,11 +15,13 @@ const ProjectsSection = () => {
           subtitle="Check out some of my recent work"
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Stagger className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+            <motion.div key={project.title} variants={scaleIn}>
+              <ProjectCard {...project} />
+            </motion.div>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

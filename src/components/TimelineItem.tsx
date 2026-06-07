@@ -1,4 +1,5 @@
-import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { slideFromLine } from "@/components/motion/variants";
 
 interface TimelineItemProps {
   date: string;
@@ -13,14 +14,15 @@ const TimelineItem = ({
   title,
   company,
   description,
-  position,
+  position, // reserved for future left/right layout
 }: TimelineItemProps) => {
   return (
-    <div
-      className="timeline-item relative pb-10 pl-10 md:pl-12"
-      data-animate="true"
+    // Slides in from the timeline line when parent <Stagger> triggers
+    <motion.div
+      className="relative pb-10 pl-10 md:pl-12"
+      variants={slideFromLine}
     >
-      <div className="timeline-dot"></div>
+      <div className="absolute w-4 h-4 bg-primary rounded-full -left-[7px] top-6 z-10" />
       <div className="p-6 bg-card border rounded-lg shadow-sm">
         <div className="flex flex-col gap-1">
           <span className="inline-block px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded">
@@ -36,7 +38,7 @@ const TimelineItem = ({
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

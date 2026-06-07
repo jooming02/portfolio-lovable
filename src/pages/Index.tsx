@@ -7,15 +7,13 @@ import SkillsSection from "@/components/sections/SkillsSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import ContactSection from "@/components/sections/ContactSection";
 import FooterSection from "@/components/sections/FooterSection";
-import useAnimations from "@/hooks/useAnimations";
 import ClickSpark from "@/components/effects/ClickSpark";
 import { primaryColor } from "@/lib/colors";
 
 const Index = () => {
-  useAnimations();
-
   return (
     <div className="min-h-screen flex flex-col">
+      {/* ClickSpark wraps the page — spark effect on click (kept per preference) */}
       <ClickSpark
         sparkColor={primaryColor}
         sparkSize={10}
