@@ -3,6 +3,7 @@
 */
 
 import React, { ReactNode } from "react";
+import { gradientTextColors } from "@/lib/colors";
 
 interface GradientTextProps {
   children: ReactNode;
@@ -14,7 +15,7 @@ interface GradientTextProps {
 export default function GradientText({
   children,
   className = "",
-  colors = ["#ffaa40", "#9c40ff", "#ffaa40"],
+  colors = gradientTextColors,
   animationSpeed = 8,
 }: GradientTextProps) {
   const gradientStyle = {
