@@ -30,7 +30,6 @@ const ProjectCard = ({
         "overflow-hidden transition-all hover:shadow-lg dark:hover:shadow-primary/10 group border-border/50",
         className
       )}
-      data-animate="true"
     >
       {imageUrl && (
         <div className="overflow-hidden w-full h-48 bg-muted">

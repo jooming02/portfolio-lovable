@@ -52,4 +52,4 @@ yarn dev
 ```
 
 ### 4. Done
-Open your browser and navigate to http://localhost:3000 to view the site.
+Open your browser and navigate to http://localhost:8080 to view the site.

@@ -10,8 +10,7 @@ const ThemeToggle = () => {
   );
 
   useEffect(() => {
-    const root = window.document.documentElement; // return root <html> element 
-    console.log("Setting root:", root);
+    const root = window.document.documentElement;
     if (theme === "dark") {
       root.classList.add("dark");
       localStorage.setItem("theme", "dark");

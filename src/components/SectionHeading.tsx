@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
-import GradientText from "@/components/ui/TextAnimations/GradientText";
+import GradientText from "@/components/effects/text/GradientText";
+import Reveal from "@/components/motion/Reveal";
 
 interface SectionHeadingProps {
   title: string;
@@ -15,30 +16,36 @@ const SectionHeading = ({
   align = "center",
 }: SectionHeadingProps) => {
   return (
-    <div
-      className={cn(
-        "mb-12",
-        {
-          "text-center": align === "center",
-          "text-left": align === "left",
-          "text-right": align === "right",
-        },
-        className
-      )}
-      data-animate="true"
-    >
-      <GradientText
-        animationSpeed={5}
-        className="text-3xl md:text-4xl font-bold mb-3 text-gradient"
+    <Reveal variant="fadeUp">
+      <div
+        className={cn(
+          "mb-12",
+          {
+            "text-center": align === "center",
+            "text-left": align === "left",
+            "text-right": align === "right",
+          },
+          className
+        )}
       >
-        {title}
-      </GradientText>
-      {subtitle && (
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          {subtitle}
-        </p>
-      )}
-    </div>
+        <GradientText
+          animationSpeed={5}
+          className="font-display text-3xl md:text-4xl font-bold mb-3 text-gradient"
+        >
+          {title}
+        </GradientText>
+        {subtitle && (
+          <p
+            className={cn(
+              "text-lg text-muted-foreground max-w-2xl",
+              align === "center" && "mx-auto"
+            )}
+          >
+            {subtitle}
+          </p>
+        )}
+      </div>
+    </Reveal>
   );
 };
 
