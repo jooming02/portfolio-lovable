@@ -14,6 +14,7 @@ const ExperienceSection = () => {
         title={entry.title}
         company={entry.company}
         companyLogo={entry.companyLogo}
+        type={entry.type}
         description={entry.description}
         images={entry.images}
         skills={entry.skills}
@@ -23,11 +24,20 @@ const ExperienceSection = () => {
 
   return (
     <section id="experience" className="relative py-20 px-4 md:px-6">
+      {/* Subtle atmosphere — depth without competing with hero particles */}
+      <div
+        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+        aria-hidden
+      >
+        <div className="absolute -left-[10%] top-[15%] h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-[100px]" />
+        <div className="absolute bottom-[10%] right-[-5%] h-64 w-64 rounded-full bg-primary/5 blur-[80px]" />
+      </div>
+
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           title="My Journey"
           subtitle="Professional experience and education"
-          align="left"
+          align="center"
         />
 
         <Timeline data={timelineData} />

@@ -20,6 +20,8 @@ export interface SkillCategory {
 export interface ExperienceImage {
   src: string;
   alt?: string;
+  /** landscape = wide crop; portrait = tall / document */
+  variant?: "portrait" | "landscape";
 }
 
 export interface ExperienceEntry {
@@ -28,6 +30,7 @@ export interface ExperienceEntry {
   company?: string;
   /** Company logo from public/experience/{folder}/ — shown beside company name */
   companyLogo?: string;
+  type?: "work" | "education";
   description: string[];
   position: "left" | "right";
   /** Photos from public/experience/{folder}/ — shown below card content */

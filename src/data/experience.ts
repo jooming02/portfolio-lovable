@@ -6,6 +6,7 @@ export const experience: ExperienceEntry[] = [
     title: "Trainee Analyst Programmer",
     company: "Public Bank Group",
     companyLogo: "/experience/pbbank/logo.png",
+    type: "work",
     description: [
       "Contributed to the migration of legacy systems from Lotus Notes to .NET.",
       "Developed proficiency in .NET framework, C#, and SQL databases through practical implementation.",
@@ -16,10 +17,12 @@ export const experience: ExperienceEntry[] = [
       {
         src: "/experience/pbbank/pbbank_groupphoto.jpeg",
         alt: "Public Bank Group team photo",
+        variant: "landscape",
       },
       {
         src: "/experience/pbbank/pbbank_groupphoto2.jpeg",
         alt: "Public Bank Group team photo",
+        variant: "landscape",
       },
     ],
   },
@@ -28,6 +31,7 @@ export const experience: ExperienceEntry[] = [
     title: "Frontend Web Developer Intern",
     company: "Sunway Group",
     companyLogo: "/experience/sunway/Sunway_logo.png",
+    type: "work",
     description: [
       "Created the interactive prototype of a Learning Management System (LMS) using Figma",
       "Participated in the User Acceptance Testing (UAT) process and presented the prototype to stakeholders for continuous improvement",
@@ -39,29 +43,33 @@ export const experience: ExperienceEntry[] = [
       {
         src: "/experience/sunway/groupphoto.jpeg",
         alt: "Sunway Group team photo",
+        variant: "landscape",
       },
       {
         src: "/experience/sunway/cert.jpeg",
         alt: "Sunway internship certificate",
+        variant: "portrait",
       },
     ],
   },
   {
     date: "2021 - 2024",
-    title: "Bachelor of Computer Science ",
-    company:
-      "Asia Pacific University of Technology and Innovation (APU / APIIT)",
+    title: "Bachelor of Computer Science",
+    company: "APU (APIIT)",
     companyLogo: "/experience/apu/apu.png",
+    type: "education",
     description: ["GPA: 3.59/4.00 (First Class Honours)"],
     position: "left",
     images: [
       {
         src: "/experience/apu/apuclcs.jpeg",
         alt: "APU LCS group photo",
+        variant: "landscape",
       },
       {
         src: "/experience/apu/apac.jpeg",
         alt: "Asia Pacific University of Technology and Innovation",
+        variant: "landscape",
       },
     ],
   },
