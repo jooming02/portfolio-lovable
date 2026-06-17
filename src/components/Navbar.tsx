@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import ThemeToggle from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import GradientText from "@/components/effects/text/GradientText";
@@ -116,9 +115,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="ml-4">
-            <ThemeToggle />
-          </div>
         </nav>
 
         {/* Mobile menu */}
@@ -142,9 +138,6 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-auto flex justify-end">
-                <ThemeToggle />
-              </div>
             </nav>
           </div>
         )}
