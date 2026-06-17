@@ -5,7 +5,6 @@ import AboutSection from "@/components/sections/AboutSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
-import ContactSection from "@/components/sections/ContactSection";
 import FooterSection from "@/components/sections/FooterSection";
 import ClickSpark from "@/components/effects/ClickSpark";
 import { primaryColor } from "@/lib/colors";
@@ -24,10 +23,9 @@ const Index = () => {
         <Navbar />
         <HeroSection />
         <AboutSection />
+        <ExperienceSection />
         <ProjectsSection />
         <SkillsSection />
-        <ExperienceSection />
-        <ContactSection />
         <FooterSection />
         <ScrollToTop />
       </ClickSpark>

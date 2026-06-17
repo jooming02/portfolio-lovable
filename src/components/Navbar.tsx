@@ -6,10 +6,9 @@ import GradientText from "@/components/effects/text/GradientText";
 const navItems = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
-  { id: "experience", label: "Experience" },
-  { id: "contact", label: "Contact" },
 ];
 
 const Navbar = () => {

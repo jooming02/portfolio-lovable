@@ -44,3 +44,26 @@ export interface AboutContent {
   profileImage: string;
   profileAlt: string;
 }
+
+export interface FooterQuickLink {
+  id: string;
+  label: string;
+}
+
+export type FooterSocialType = "github" | "linkedin" | "email";
+
+export interface FooterSocialLink {
+  type: FooterSocialType;
+  href: string;
+  label: string;
+}
+
+export interface FooterContent {
+  name: string;
+  bio: string;
+  socialLinks: FooterSocialLink[];
+  quickLinks: FooterQuickLink[];
+  contactHeading: string;
+  availability: string[];
+  lastUpdated: string;
+}
