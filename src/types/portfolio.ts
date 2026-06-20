@@ -43,6 +43,7 @@ export interface AboutContent {
   paragraphs: string[];
   profileImage: string;
   profileAlt: string;
+  gallery: string[];
 }
 
 export interface FooterQuickLink {

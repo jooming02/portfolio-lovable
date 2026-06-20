@@ -8,7 +8,7 @@ import { projects } from "@/data/projects";
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 px-4 md:px-6">
+    <section id="projects" className="py-20 px-4 md:px-6 bg-accent/30">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="My Projects"

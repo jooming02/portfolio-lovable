@@ -6,7 +6,7 @@ import { skillCategories } from "@/data/skills";
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-20 px-4 md:px-6 bg-accent/30">
+    <section id="skills" className="py-20 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="My Skills"
