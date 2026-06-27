@@ -29,5 +29,5 @@ export const footer: FooterContent = {
   ],
   contactHeading: "Get In Touch",
   availability: ["Open to new opportunities", "Available for freelance work"],
-  lastUpdated: "17/6/2026",
+  lastUpdated: "28/6/2026",
 };
