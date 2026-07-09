@@ -7,4 +7,11 @@ export const about: AboutContent = {
   ],
   profileImage: "/profile/profile.jpeg",
   profileAlt: "My profile",
+  gallery: [
+    "/profile/profile.jpeg",
+    "/experience/apu/apuclcs.jpeg",
+    "/experience/sunway/cert.jpeg",
+    "/experience/pbbank/pbbank_groupphoto.jpeg",
+    "/experience/tencent/office.jpeg",
+  ],
 };

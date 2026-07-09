@@ -27,7 +27,7 @@ const ProjectCard = ({
   return (
     <Card 
       className={cn(
-        "overflow-hidden transition-all hover:shadow-lg dark:hover:shadow-primary/10 group border-border/50",
+        "overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/10 group border-border/50",
         className
       )}
     >

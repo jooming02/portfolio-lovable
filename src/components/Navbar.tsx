@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import ThemeToggle from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import GradientText from "@/components/effects/text/GradientText";
@@ -7,10 +6,9 @@ import GradientText from "@/components/effects/text/GradientText";
 const navItems = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
-  { id: "experience", label: "Experience" },
-  { id: "contact", label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -116,9 +114,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="ml-4">
-            <ThemeToggle />
-          </div>
         </nav>
 
         {/* Mobile menu */}
@@ -142,9 +137,6 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-auto flex justify-end">
-                <ThemeToggle />
-              </div>
             </nav>
           </div>
         )}
