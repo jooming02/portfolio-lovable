@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: "MonitorCare",
     description:
-      "A mHealth-based NCD (Non-Communicable Diseases) Monitoring System utilizing data from body tests to detect andprevent NCDs at an early stage.",
+      "A mHealth-based NCD (Non-Communicable Diseases) Monitoring System utilizing data from body tests to detect and prevent NCDs at an early stage.",
     tags: ["React Native", "Node.js", "MongoDB", "Express.js", "XGBoost"],
     imageUrl: "/projects/monitorcare.png",
     githubUrl: "https://github.com/jooming02/fyp_monitorcare",
@@ -30,10 +30,10 @@ export const projects: Project[] = [
   {
     title: "Portfolio Website",
     description:
-      "A personal portfolio website showcasing projects, skills, and experience with dark mode support and smooth animations.",
-    tags: ["React", "Tailwind CSS", "shadcn-ui", "TypeScript"],
+      "A personal portfolio website showcasing projects, skills, and experience with interactive effects and smooth animations.",
+    tags: ["React", "Tailwind CSS", "TypeScript", "Three.js", "Framer Motion"],
     imageUrl: "/projects/portfolio.png",
-    liveUrl: "https://laujooming.lovable.app/",
+    // Set liveUrl after first Vercel deploy (e.g. https://your-project.vercel.app/)
     githubUrl: "https://github.com/jooming02/portfolio-lovable",
   },
   {

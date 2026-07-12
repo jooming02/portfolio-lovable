@@ -2,17 +2,44 @@ import type { ExperienceEntry } from "@/types/portfolio";
 
 export const experience: ExperienceEntry[] = [
   {
+    date: "Jul 2025 - Present",
+    title: "Frontend Developer",
+    company: "Tencent",
+    companyLogo: "/experience/tencent/tencent.png",
+    type: "work",
+    description: [
+      "Primary frontend contributor to the Strategic Management Dashboard — a React, TypeScript, and UmiJS micro-frontend module within Tencent's DataBrain analytics platform (800+ commits across executive reporting, studio portfolio management, and publishing operations).",
+      "Built enterprise dashboard solutions with ECharts visualizations, RESTful API integrations, analytics tracking, and English/Chinese internationalization for leadership stakeholders.",
+      "Implemented complex workflows including form validation, edit-state management, auto-save, and role-based access control for sensitive business data.",
+      "Contributed to a 10+ Agent Skill/Rule framework and used MCP and AI-assisted workflows to improve development efficiency.",
+    ],
+    position: "left",
+    skills: ["React", "TypeScript", "UmiJS", "ECharts"],
+    images: [
+      {
+        src: "/experience/tencent/databrain.jpg",
+        alt: "DataBrain developers and products",
+        variant: "landscape",
+      },
+      {
+        src: "/experience/tencent/databrain_developer.jpg",
+        alt: "DataBrain developers",
+        variant: "portrait",
+      }
+    ],
+  },
+  {
     date: "Dec 2024 - Jul 2025",
     title: "Trainee Analyst Programmer",
     company: "Public Bank Group",
     companyLogo: "/experience/pbbank/logo.png",
     type: "work",
     description: [
-      "Contributed to the migration of legacy systems from Lotus Notes to .NET.",
-      "Developed proficiency in .NET framework, C#, and SQL databases through practical implementation.",
+      "Contributed to the migration of legacy banking systems from Lotus Notes to .NET Core, supporting modernization and long-term maintainability.",
+      "Developed and maintained internal enterprise modules using C#, .NET Framework, SQL Server, JavaScript, jQuery, and AJAX — covering both frontend and backend integration.",
     ],
     position: "left",
-    skills: [".NET", "C#", "SQL"],
+    skills: [".NET", "C#", "SQL Server", "JavaScript"],
     images: [
       {
         src: "/experience/pbbank/pbbank_groupphoto.jpeg",
@@ -21,7 +48,7 @@ export const experience: ExperienceEntry[] = [
       },
       {
         src: "/experience/pbbank/pbbank_groupphoto2.jpeg",
-        alt: "Public Bank Group team photo",
+        alt: "Public Bank Group orientation training",
         variant: "landscape",
       },
     ],
@@ -33,9 +60,8 @@ export const experience: ExperienceEntry[] = [
     companyLogo: "/experience/sunway/Sunway_logo.png",
     type: "work",
     description: [
-      "Created the interactive prototype of a Learning Management System (LMS) using Figma",
-      "Participated in the User Acceptance Testing (UAT) process and presented the prototype to stakeholders for continuous improvement",
-      "Developed the LMS frontend using Svelte, Svelte Kit, and Bootstrap, creating responsive and dynamic web pages that enhanced the user learning experience",
+      "Designed, prototyped, and developed a Learning Management System (LMS) using Figma, Svelte, SvelteKit, and Bootstrap — translating requirements into responsive, user-centric interfaces.",
+      "Collaborated with stakeholders during User Acceptance Testing (UAT) to gather feedback, refine functionality, and improve usability.",
     ],
     position: "left",
     skills: ["Svelte", "SvelteKit", "Figma", "Bootstrap"],
@@ -58,16 +84,16 @@ export const experience: ExperienceEntry[] = [
     company: "APU (APIIT)",
     companyLogo: "/experience/apu/apu.png",
     type: "education",
-    description: ["GPA: 3.59/4.00 (First Class Honours)"],
+    description: ["CGPA: 3.59/4.00 (First Class Honours)"],
     position: "left",
     images: [
       {
         src: "/experience/apu/apuclcs.jpeg",
-        alt: "APU LCS group photo",
+        alt: "APU CLCS group photo",
         variant: "landscape",
       },
       {
-        src: "/experience/apu/apac.jpeg",
+        src: "/experience/apu/graduation.jpg",
         alt: "Asia Pacific University of Technology and Innovation",
         variant: "landscape",
       },

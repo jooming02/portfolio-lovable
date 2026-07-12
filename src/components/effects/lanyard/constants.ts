@@ -58,7 +58,7 @@ export const CARD_THEME = {
 export const CARD_DEFAULTS = {
   name: "Lau Joo Ming",
   title: "Frontend Developer",
-  website: "laujooming.lovable.app",
+  website: "github.com/jooming02",
   label: "PORTFOLIO",
 } as const;
 

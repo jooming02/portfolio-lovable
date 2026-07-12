@@ -39,8 +39,17 @@ export interface ExperienceEntry {
   skills?: string[];
 }
 
+export interface AboutHighlight {
+  /** Exact phrase to highlight in the paragraphs */
+  text: string;
+  /** emphasis = brighter text; accent = primary color */
+  variant?: "emphasis" | "accent";
+}
+
 export interface AboutContent {
   paragraphs: string[];
+  /** Phrases to highlight across paragraphs — edit here to control standout words */
+  highlights?: AboutHighlight[];
   profileImage: string;
   profileAlt: string;
   gallery: string[];
@@ -67,4 +76,27 @@ export interface FooterContent {
   contactHeading: string;
   availability: string[];
   lastUpdated: string;
+}
+
+export interface HeroCta {
+  label: string;
+  href: string;
+  /** Open in new tab (e.g. resume PDF) */
+  external?: boolean;
+}
+
+export interface HeroLanyard {
+  name: string;
+  title: string;
+  website: string;
+}
+
+export interface HeroContent {
+  name: string;
+  role: string;
+  bio: string;
+  primaryCta: HeroCta;
+  secondaryCta: HeroCta;
+  socialLinks: FooterSocialLink[];
+  lanyard: HeroLanyard;
 }

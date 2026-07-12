@@ -27,9 +27,9 @@ const SkillCard = ({ name, icon }: SkillCardProps) => {
         <img
           src={`/logo/${icon}`}
           alt={name}
-          className="h-10 w-10 shrink-0 object-contain"
+          className="h-[34%] w-[34%] max-h-10 max-w-10 shrink-0 object-contain"
         />
-        <h3 className="line-clamp-2 px-0.5 text-center text-sm font-medium leading-snug">
+        <h3 className="line-clamp-2 max-w-full px-0.5 text-center text-[0.7rem] font-medium leading-snug sm:text-sm">
           {name}
         </h3>
       </div>

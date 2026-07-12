@@ -23,7 +23,7 @@ const ExperienceSection = () => {
   }));
 
   return (
-    <section id="experience" className="relative py-20 px-4 md:px-6">
+    <section id="experience" className="relative py-16 px-4 md:py-20 md:px-6">
       {/* Subtle atmosphere — depth without competing with hero particles */}
       <div
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"

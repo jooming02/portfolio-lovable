@@ -2,7 +2,7 @@ import type { FooterContent } from "@/types/portfolio";
 
 export const footer: FooterContent = {
   name: "Lau Joo Ming",
-  bio: "Frontend developer passionate about creating accessible, responsive web experiences. Always learning, always building.",
+  bio: "Software engineer building across the stack — frontend today, full-stack ahead. Always learning, always shipping.",
   socialLinks: [
     {
       type: "github",
@@ -28,6 +28,6 @@ export const footer: FooterContent = {
     { id: "skills", label: "Skills" },
   ],
   contactHeading: "Get In Touch",
-  availability: ["Open to new opportunities", "Available for freelance work"],
-  lastUpdated: "29/6/2026",
+  availability: ["Open to new opportunities", "Happy to connect"],
+  lastUpdated: "12/7/2026",
 };
