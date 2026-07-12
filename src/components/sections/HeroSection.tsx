@@ -147,7 +147,7 @@ const HeroSection = () => {
               cardInfo={{
                 name: "Lau Joo Ming",
                 title: "Frontend Developer",
-                website: "laujooming.lovable.app",
+                website: "github.com/jooming02",
               }}
             />
           </div>

@@ -30,10 +30,10 @@ export const projects: Project[] = [
   {
     title: "Portfolio Website",
     description:
-      "A personal portfolio website showcasing projects, skills, and experience with dark mode support and smooth animations.",
-    tags: ["React", "Tailwind CSS", "shadcn-ui", "TypeScript"],
+      "A personal portfolio website showcasing projects, skills, and experience with interactive effects and smooth animations.",
+    tags: ["React", "Tailwind CSS", "TypeScript", "Three.js", "Framer Motion"],
     imageUrl: "/projects/portfolio.png",
-    liveUrl: "https://laujooming.lovable.app/",
+    // Set liveUrl after first Vercel deploy (e.g. https://your-project.vercel.app/)
     githubUrl: "https://github.com/jooming02/portfolio-lovable",
   },
   {
