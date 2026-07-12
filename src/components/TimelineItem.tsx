@@ -64,12 +64,12 @@ const TimelineItem = ({
             aria-hidden
           />
 
-          <div className="flex flex-col gap-4 p-5 pl-6 md:p-6 md:pl-7">
+          <div className="flex flex-col gap-3 p-4 pl-4 sm:gap-4 sm:p-5 md:p-6 md:pl-7">
             <div className="min-w-0 flex-1">
-              <div className="mb-2 flex items-start gap-3">
+              <div className="mb-2 flex items-start gap-2.5 sm:gap-3">
                 {companyLogo && (
                   <div
-                    className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-white p-2"
+                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white p-1.5 sm:h-14 sm:w-14 sm:p-2"
                   >
                     <img
                       src={encodeURI(companyLogo)}
@@ -80,7 +80,7 @@ const TimelineItem = ({
                 )}
                 <div className="min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
-                    <h3 className="font-display text-xl font-semibold tracking-tight text-foreground md:text-2xl">
+                    <h3 className="font-display text-lg font-semibold tracking-tight text-foreground sm:text-xl md:text-2xl">
                       {title}
                     </h3>
                     {isEducation && (
@@ -125,11 +125,11 @@ const TimelineItem = ({
               )}
 
               {/* <p className="mt-2 text-sm text-card-foreground/80">{description}</p> */}
-              <ul className="mt-4 space-y-2.5">
+              <ul className="mt-3 space-y-2 sm:mt-4 sm:space-y-2.5">
                 {description.map((point, index) => (
                   <li
                     key={index}
-                    className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
+                    className="flex gap-2.5 text-sm leading-relaxed text-muted-foreground sm:gap-3"
                   >
                     <span
                       className="mt-[0.55rem] h-1.5 w-1.5 shrink-0 rounded-full"
@@ -163,7 +163,7 @@ const TimelineItem = ({
                         )}
                       >
                         {/* Fixed height for all tiles — portrait crops to match landscape; full image in lightbox */}
-                        <div className="relative h-44 sm:h-48">
+                        <div className="relative h-36 sm:h-44 md:h-48">
                           <img
                             src={encodeURI(image.src)}
                             alt={caption ?? `${title} photo ${index + 1}`}

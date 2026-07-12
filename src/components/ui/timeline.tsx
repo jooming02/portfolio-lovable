@@ -2,6 +2,7 @@
  * Aceternity UI Timeline — sticky date labels + scroll-following beam on the line.
  * Source: https://ui.aceternity.com/components/timeline
  * Adapted: framer-motion (not motion/react), site theme tokens, no built-in section header.
+ * Mobile: left rail + indented cards so the line/date/dot align cleanly.
  */
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState, type ReactNode } from "react";
@@ -18,8 +19,16 @@ interface TimelineProps {
   className?: string;
 }
 
-/** Line + dot sit on the left rail; content column gets ~70% width (3:7) */
-const LINE_LEFT = "left-5"; // 20px — aligns rail in the timeline column (the vertical line beam)
+/**
+ * Rail geometry (mobile + desktop):
+ * - Line centered at 16px (left-4)
+ * - Dot (24px) centered on the line via -translate-x-1/2
+ * - Content indented so cards clear the rail
+ */
+const RAIL_LINE = "left-4";
+const RAIL_DOT =
+  "absolute left-4 top-1.5 z-10 -translate-x-1/2 shrink-0";
+const RAIL_CONTENT = "pl-10 md:pl-0";
 
 export const Timeline = ({ data, className }: TimelineProps) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -51,7 +60,7 @@ export const Timeline = ({ data, className }: TimelineProps) => {
   const beamBackgroundPosition = useTransform(
     scrollYProgress,
     [0, 1],
-    ["0% 0%", "0% 100%"]
+    ["0% 0%", "0% 100%"],
   );
 
   return (
@@ -60,28 +69,32 @@ export const Timeline = ({ data, className }: TimelineProps) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="relative z-10 grid grid-cols-1 gap-3 pt-8 md:grid-cols-[minmax(0,3fr)_minmax(0,7fr)] md:gap-x-6 md:pt-16 lg:gap-x-8"
+            className="relative z-10 grid grid-cols-1 gap-2 pt-6 md:grid-cols-[minmax(0,3fr)_minmax(0,7fr)] md:gap-x-6 md:gap-y-0 md:pt-16 lg:gap-x-8"
           >
-            {/* Narrow timeline column — sticky date, subtle marker */}
+            {/* Date row — shares the left rail with the beam on mobile */}
             <div className="relative z-10 md:sticky md:top-40 md:self-start">
-              <div className="flex items-center gap-3 md:pl-9">
+              <div className={cn("relative flex items-center md:pl-9")}>
                 {/* Outer ring masks the beam — line passes behind, not over the dot */}
-                <div
-                  className="relative z-10 shrink-0 md:absolute md:left-[9px] md:top-1.5"
-                  aria-hidden
-                >
+                <div className={cn(RAIL_DOT, "md:left-[20px] md:top-1.5")} aria-hidden>
                   <div className="flex h-6 w-6 items-center justify-center rounded-full bg-background">
                     <div className="h-3 w-3 rounded-full border border-muted-foreground/25 bg-muted-foreground/45" />
                   </div>
                 </div>
-                <h3 className="font-display text-lg font-semibold text-muted-foreground md:text-xl lg:text-2xl">
+                <h3
+                  className={cn(
+                    "font-display text-base font-semibold text-muted-foreground sm:text-lg md:pl-0 md:text-xl lg:text-2xl",
+                    RAIL_CONTENT,
+                  )}
+                >
                   {item.title}
                 </h3>
               </div>
             </div>
 
-            {/* Content column — majority of horizontal space */}
-            <div className="relative min-w-0">{item.content}</div>
+            {/* Content — indented on mobile so it sits beside the rail, not under it */}
+            <div className={cn("relative min-w-0", RAIL_CONTENT)}>
+              {item.content}
+            </div>
           </div>
         ))}
 
@@ -90,7 +103,8 @@ export const Timeline = ({ data, className }: TimelineProps) => {
           style={{ height: `${height}px` }}
           className={cn(
             "absolute top-0 z-0 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-border/40 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]",
-            LINE_LEFT
+            RAIL_LINE,
+            "md:left-5",
           )}
         >
           <motion.div
