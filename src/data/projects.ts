@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     title: "MonitorCare",
     description:
-      "A mHealth-based NCD (Non-Communicable Diseases) Monitoring System utilizing data from body tests to detect andprevent NCDs at an early stage.",
+      "A mHealth-based NCD (Non-Communicable Diseases) Monitoring System utilizing data from body tests to detect and prevent NCDs at an early stage.",
     tags: ["React Native", "Node.js", "MongoDB", "Express.js", "XGBoost"],
     imageUrl: "/projects/monitorcare.png",
     githubUrl: "https://github.com/jooming02/fyp_monitorcare",

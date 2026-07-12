@@ -2,16 +2,24 @@ import type { AboutContent } from "@/types/portfolio";
 
 export const about: AboutContent = {
   paragraphs: [
-    "Hi, I'm a passionate frontend developer with a degree in Computer Science from Asia Pacific University (APU), currently working as a Software Developer at Public Bank with a focus on the .NET framework. I'm also former Web Developer Intern at Sunway Group with practical experience in React, Svelte, and modern frontend technologies.",
-    "I specialize in React, TypeScript, and modern frontend frameworks, but I'm also comfortable working with backend technologies. I love learning new technologies and techniques to improve my craft.",
+    "Hi, I'm Lau Joo Ming — a Frontend Developer at Tencent with nearly two years of full-stack experience spanning enterprise frontend (React, TypeScript, UmiJS) and backend systems (.NET, SQL Server).",
+    "I graduated with First Class Honours in Computer Science from APU, and I enjoy using AI-assisted workflows and tools like MCP to ship faster — without sacrificing clean architecture or production quality.",
+    "My journey started as a Frontend Web Developer Intern at Sunway, grew into full-stack work at Public Bank, and now continues as a Frontend Developer at Tencent — and it's not stopping there. I'm actively expanding toward a stronger full-stack path.",
+  ],
+  /** Add/remove phrases here to control what stands out in About */
+  highlights: [
+    { text: "Tencent", variant: "emphasis" },
+    { text: "First Class Honours", variant: "emphasis" },
+    { text: "Sunway", variant: "emphasis" },
+    { text: "Public Bank", variant: "emphasis" },
   ],
   profileImage: "/profile/profile.jpeg",
   profileAlt: "My profile",
   gallery: [
     "/profile/profile.jpeg",
-    "/experience/apu/apuclcs.jpeg",
-    "/experience/sunway/cert.jpeg",
-    "/experience/pbbank/pbbank_groupphoto.jpeg",
-    "/experience/tencent/office.jpeg",
+    "/profile/travel.jpg",
+    "/profile/travel2.jpg",
+    "/profile/travel3.jpg",
+    "/profile/skecher.jpg",
   ],
 };

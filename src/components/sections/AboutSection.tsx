@@ -3,11 +3,13 @@ import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/motion/Reveal";
 import Stack from "@/components/effects/Stack/Stack";
 import { about } from "@/data/about";
+import { highlightText } from "@/lib/highlightText";
 
 const AboutSection = () => {
+  // Stack shows the *last* card on top — reverse so about.gallery[0] is the front photo
   const galleryCards = useMemo(
     () =>
-      about.gallery.map((src) => (
+      [...about.gallery].reverse().map((src) => (
         <img key={src} src={src} alt="" className="card-image" />
       )),
     [],
@@ -29,7 +31,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto">
         <SectionHeading
           title="About Me"
-          subtitle="Learn more about my background and approach to development"
+          subtitle="Learn more about my background"
           className="mb-8"
         />
 
@@ -41,7 +43,7 @@ const AboutSection = () => {
                   key={index}
                   className="text-sm md:text-base text-muted-foreground leading-relaxed text-left lg:text-justify"
                 >
-                  {paragraph}
+                  {highlightText(paragraph, about.highlights)}
                 </p>
               ))}
             </div>
