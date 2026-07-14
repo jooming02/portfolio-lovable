@@ -1,11 +1,9 @@
 # Personal Developer Portfolio
 
-Portfolio site for **Lau Joo Ming** — projects, skills, and experience as a frontend developer.
+Portfolio site for **Lau Joo Ming** — projects, skills, and experience as a software developer.
 
 ## Live site
-
-> Deploy on [Vercel](https://vercel.com) from this repo (Vite → `dist`).  
-> After the first deploy, update the live URL here and in `src/data/projects.ts` / the lanyard card.
+https://portfolio-laujooming.vercel.app/
 
 ## Features
 
@@ -26,8 +24,8 @@ Portfolio site for **Lau Joo Ming** — projects, skills, and experience as a fr
 ## Getting Started
 
 ```bash
-git clone https://github.com/jooming02/portfolio-lovable.git
-cd portfolio-lovable
+git clone https://github.com/jooming02/portfolio-laujooming.git
+cd portfolio-laujooming
 npm install
 npm run dev
 ```
